@@ -56,5 +56,6 @@
   },
   "dependencies": {
     "motion": "^12.34.5"
-  }
+  },
+  "packageManager": "yarn@4.9.1"
 }
