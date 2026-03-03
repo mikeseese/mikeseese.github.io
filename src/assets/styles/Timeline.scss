@@ -1,0 +1,82 @@
+.vertical-timeline span {
+    color: white;
+    font-family: 'Courier Prime', monospace;
+}
+
+/* Card styling */
+.vertical-timeline-element-content {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(80, 0, 202, 0.12) 100%
+    ) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(180, 180, 180, 0.22) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 8px !important;
+}
+
+/* Arrow that points toward the timeline spine */
+.vertical-timeline-element-content .vertical-timeline-element-content-arrow {
+    border-right-color: rgba(180, 180, 180, 0.22) !important;
+}
+
+.vertical-timeline p,
+.vertical-timeline-element p,
+.vertical-timeline-element h3,
+.vertical-timeline-element h4,
+.vertical-timeline-element span {
+    color: white;
+}
+
+.vertical-timeline-element .vertical-timeline-element-date {
+    color: white;
+}
+
+.svg-inline--fa {
+    color: white;
+}
+
+.megagrant-logo {
+    display: block;
+    height: 48px;
+    width: auto;
+    margin-top: 12px;
+    transition: transform 0.2s, opacity 0.2s;
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+}
+
+.timeline-video-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.timeline-thumb {
+    width: 120px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .vertical-timeline-element .vertical-timeline-element-date {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .timeline-thumb {
+        width: 100px;
+    }
+}
