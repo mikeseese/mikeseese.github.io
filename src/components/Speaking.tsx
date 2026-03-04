@@ -23,7 +23,8 @@ function Speaking() {
             icon={<FontAwesomeIcon icon={faMicrophone} />}
           >
             <h3 className="vertical-timeline-element-title">
-              Cheating on My CPU with Distributed Unreal Builds: A UBA Love Story
+              Cheating on My CPU with Distributed Unreal Builds: A UBA Love
+              Story
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
               MDEV 2025, MIGS 2025
@@ -101,9 +102,7 @@ function Speaking() {
             <h3 className="vertical-timeline-element-title">
               Understanding Asset Dependencies in Unreal Engine 5
             </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Unreal PDX
-            </h4>
+            <h4 className="vertical-timeline-element-subtitle">Unreal PDX</h4>
             <div className="timeline-video-row">
               <a
                 href="https://www.youtube.com/watch?v=AVSZOEHy3_I"
@@ -127,9 +126,7 @@ function Speaking() {
             <h3 className="vertical-timeline-element-title">
               Introduction to Multiplayer in Unreal Engine 5
             </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Unreal PDX
-            </h4>
+            <h4 className="vertical-timeline-element-subtitle">Unreal PDX</h4>
             <div className="timeline-video-row">
               <a
                 href="https://www.youtube.com/watch?v=0IwWbH7R6i4"

@@ -11,7 +11,9 @@ function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
   const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
@@ -20,9 +22,13 @@ function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
     <div
       className="lightbox-overlay"
       ref={overlayRef}
-      onClick={(e) => { if (e.target === overlayRef.current) onClose(); }}
+      onClick={(e) => {
+        if (e.target === overlayRef.current) onClose();
+      }}
     >
-      <button className="lightbox-close" onClick={onClose} aria-label="Close">&times;</button>
+      <button className="lightbox-close" onClick={onClose} aria-label="Close">
+        &times;
+      </button>
       {isVideo ? (
         <video
           src={src}
@@ -87,7 +93,10 @@ function PluginCarousel() {
 
   useEffect(() => {
     if (paused || hovering) return;
-    const id = setInterval(() => setIndex((i) => (i + 1) % PLUGINS.length), 4500);
+    const id = setInterval(
+      () => setIndex((i) => (i + 1) % PLUGINS.length),
+      4500
+    );
     return () => clearInterval(id);
   }, [paused, hovering]);
 
@@ -103,10 +112,18 @@ function PluginCarousel() {
         <a href={plugin.href} target="_blank" rel="noreferrer">
           <img src={plugin.src} className="project-thumb" alt={plugin.alt} />
         </a>
-        <button className="carousel-btn carousel-btn--prev" onClick={prev} aria-label="Previous">
+        <button
+          className="carousel-btn carousel-btn--prev"
+          onClick={prev}
+          aria-label="Previous"
+        >
           &#8249;
         </button>
-        <button className="carousel-btn carousel-btn--next" onClick={next} aria-label="Next">
+        <button
+          className="carousel-btn carousel-btn--next"
+          onClick={next}
+          aria-label="Next"
+        >
           &#8250;
         </button>
       </div>
@@ -133,7 +150,11 @@ const gridVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
 };
 
 function Project() {
@@ -141,7 +162,9 @@ function Project() {
 
   return (
     <div className="projects-container" id="projects">
-      {lightboxSrc && <VideoLightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />}
+      {lightboxSrc && (
+        <VideoLightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />
+      )}
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -158,14 +181,22 @@ function Project() {
         viewport={{ once: true, margin: "-80px" }}
       >
         <motion.div className="project" variants={cardVariants}>
-          <a href="https://redwoodmultiplayer.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://redwoodmultiplayer.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="https://img.youtube.com/vi/YkwOrgSVNqo/hqdefault.jpg"
               className="project-thumb"
               alt="Redwood Multiplayer Backend"
             />
           </a>
-          <a href="https://redwoodmultiplayer.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://redwoodmultiplayer.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Redwood Multiplayer Backend</h2>
           </a>
           <p>
@@ -175,14 +206,22 @@ function Project() {
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <a href="https://github.com/incanta/Checkpoint" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/incanta/Checkpoint"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={checkpointImg}
               className="project-thumb"
               alt="Checkpoint Version Control"
             />
           </a>
-          <a href="https://github.com/incanta/Checkpoint" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/incanta/Checkpoint"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Checkpoint Version Control</h2>
           </a>
           <p>
@@ -191,7 +230,11 @@ function Project() {
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <button className="video-thumb-btn" onClick={() => setLightboxSrc(chromiumviewVid)} aria-label="Play ChromiumView demo">
+          <button
+            className="video-thumb-btn"
+            onClick={() => setLightboxSrc(chromiumviewVid)}
+            aria-label="Play ChromiumView demo"
+          >
             <video
               src={chromiumviewVid}
               className="project-thumb"
@@ -201,7 +244,11 @@ function Project() {
               playsInline
             />
           </button>
-          <a href="https://github.com/incanta/ChromiumView" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/incanta/ChromiumView"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Unreal Engine ChromiumView Plugin</h2>
           </a>
           <p>
@@ -211,11 +258,7 @@ function Project() {
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
           <a href="https://hathora.dev/" target="_blank" rel="noreferrer">
-            <img
-              src={hathoraImg}
-              className="project-thumb"
-              alt="Hathora"
-            />
+            <img src={hathoraImg} className="project-thumb" alt="Hathora" />
           </a>
           <a href="https://hathora.dev" target="_blank" rel="noreferrer">
             <h2>Hathora (Client)</h2>
@@ -239,9 +282,10 @@ function Project() {
             <h2>JALI Research (Client)</h2>
           </a>
           <p>
-            350+ hours (2022–2024) co-developing JALI's Unreal Engine plugin
-            and emotion tagging desktop app for automated lip sync and facial
-            animation used by studios like CD PROJEKT RED, Xbox, and Obsidian Entertainment.
+            350+ hours (2022–2024) co-developing JALI's Unreal Engine plugin and
+            emotion tagging desktop app for automated lip sync and facial
+            animation used by studios like CD PROJEKT RED, Xbox, and Obsidian
+            Entertainment.
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
@@ -264,15 +308,39 @@ function Project() {
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
           <PluginCarousel />
-          <a href="https://www.fab.com/sellers/Incanta" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.fab.com/sellers/Incanta"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Unreal Engine Plugins on Fab</h2>
           </a>
           <p>
-            Published 3 Unreal Engine C++ plugins (all rated ⭐ 5.0):
-            {" "}<a href="https://www.fab.com/listings/9020eef3-f598-473d-9964-84ad507002be" target="_blank" rel="noreferrer">FileSDK</a>,
-            {" "}<a href="https://www.fab.com/listings/1f5fc0dd-6b38-475b-8e5d-4dddae0d5852" target="_blank" rel="noreferrer">Blueprint CSV Parsing</a>, and
-            {" "}<a href="https://www.fab.com/listings/cacabb1a-763b-4703-b993-a6f6ca5b807c" target="_blank" rel="noreferrer">Zen Dev</a>.
-            Also developing an upcoming UE5 plugin for LLM agentic workflows.
+            Published 3 Unreal Engine C++ plugins (all rated ⭐ 5.0):{" "}
+            <a
+              href="https://www.fab.com/listings/9020eef3-f598-473d-9964-84ad507002be"
+              target="_blank"
+              rel="noreferrer"
+            >
+              FileSDK
+            </a>
+            ,{" "}
+            <a
+              href="https://www.fab.com/listings/1f5fc0dd-6b38-475b-8e5d-4dddae0d5852"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Blueprint CSV Parsing
+            </a>
+            , and{" "}
+            <a
+              href="https://www.fab.com/listings/cacabb1a-763b-4703-b993-a6f6ca5b807c"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Zen Dev
+            </a>
+            . Also developing an upcoming UE5 plugin for LLM agentic workflows.
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
@@ -295,65 +363,104 @@ function Project() {
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <button className="video-thumb-btn" onClick={() => setLightboxSrc("https://camo.githubusercontent.com/bb0afa6ebccbd6185db3a220cf7eb5c7b03e3c35097d26f647a650cbe800d734/68747470733a2f2f692e696d6775722e636f6d2f6b7248357546622e676966")} aria-label="View Velma demo">
+          <button
+            className="video-thumb-btn"
+            onClick={() =>
+              setLightboxSrc(
+                "https://camo.githubusercontent.com/bb0afa6ebccbd6185db3a220cf7eb5c7b03e3c35097d26f647a650cbe800d734/68747470733a2f2f692e696d6775722e636f6d2f6b7248357546622e676966"
+              )
+            }
+            aria-label="View Velma demo"
+          >
             <img
               src="https://camo.githubusercontent.com/bb0afa6ebccbd6185db3a220cf7eb5c7b03e3c35097d26f647a650cbe800d734/68747470733a2f2f692e696d6775722e636f6d2f6b7248357546622e676966"
               className="project-thumb"
               alt="Velma Solidity Debugger"
             />
           </button>
-          <a href="https://github.com/mikeseese/velma" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/mikeseese/velma"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Velma Solidity Debugger</h2>
           </a>
           <p>
             Won a 2k REP (~$70k USD at award) software bounty for building the
-            first real-time portable Solidity debugger for the Ethereum ecosystem.
+            first real-time portable Solidity debugger for the Ethereum
+            ecosystem.
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <a href="https://incanta.itch.io/430-shuffle" target="_blank" rel="noreferrer">
+          <a
+            href="https://incanta.itch.io/430-shuffle"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="https://img.itch.zone/aW1hZ2UvMjIyNjIwMC8xMzE4MjQ5My5wbmc=/original/mktdO0.png"
               className="project-thumb"
               alt="4:30 Shuffle"
             />
           </a>
-          <a href="https://incanta.itch.io/430-shuffle" target="_blank" rel="noreferrer">
+          <a
+            href="https://incanta.itch.io/430-shuffle"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>4:30 Shuffle (Game Jam)</h2>
           </a>
           <p>
-            Break free from the office at the end of work week to make it to happy hour!
+            Break free from the office at the end of work week to make it to
+            happy hour!
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <a href="https://incanta.itch.io/mission-monster" target="_blank" rel="noreferrer">
+          <a
+            href="https://incanta.itch.io/mission-monster"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="https://img.itch.zone/aW1hZ2UvMTI1MDAzMC83MzA2OTE4LnBuZw==/original/ovPjBg.png"
               className="project-thumb"
               alt="Mission: Monster"
             />
           </a>
-          <a href="https://incanta.itch.io/mission-monster" target="_blank" rel="noreferrer">
+          <a
+            href="https://incanta.itch.io/mission-monster"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Mission: Monster (Game Jam)</h2>
           </a>
           <p>
-            Gilbert the Intergalactic Gourd is on a mission to rescue a
-            stranded agent from Earth's scary trick-or-treaters.
+            Gilbert the Intergalactic Gourd is on a mission to rescue a stranded
+            agent from Earth's scary trick-or-treaters.
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <a href="https://incanta.itch.io/niko-the-fox" target="_blank" rel="noreferrer">
+          <a
+            href="https://incanta.itch.io/niko-the-fox"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="https://img.youtube.com/vi/qdiG8AjkQDU/hqdefault.jpg"
               className="project-thumb"
               alt="Niko the Fox"
             />
           </a>
-          <a href="https://incanta.itch.io/niko-the-fox" target="_blank" rel="noreferrer">
+          <a
+            href="https://incanta.itch.io/niko-the-fox"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h2>Niko the Fox (Game Jam)</h2>
           </a>
           <p>
-            A short, cartoon 3D stealth platformer about a fox re-discovering his past.
+            A short, cartoon 3D stealth platformer about a fox re-discovering
+            his past.
           </p>
         </motion.div>
       </motion.div>

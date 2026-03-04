@@ -8,11 +8,7 @@ function Footer() {
   return (
     <footer>
       <div>
-        <a
-          href="https://github.com/mikeseese"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://github.com/mikeseese" target="_blank" rel="noreferrer">
           <GitHubIcon />
         </a>
         <a
@@ -30,9 +26,7 @@ function Footer() {
           <ArticleIcon />
         </a>
       </div>
-      <p>
-        &copy; {new Date().getFullYear()} Mike Seese
-      </p>
+      <p>&copy; {new Date().getFullYear()} Mike Seese</p>
     </footer>
   );
 }

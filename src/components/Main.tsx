@@ -17,7 +17,11 @@ const heroVariants = {
 
 const heroItemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" as const },
+  },
 };
 
 function Main() {
@@ -53,10 +57,7 @@ function Main() {
             >
               <LinkedInIcon />
             </a>
-            <a
-              href="mailto:mike@incanta.dev"
-              rel="noreferrer"
-            >
+            <a href="mailto:mike@incanta.dev" rel="noreferrer">
               <EmailIcon />
             </a>
             <a
@@ -69,10 +70,15 @@ function Main() {
             </a>
           </motion.div>
           <motion.h1 variants={heroItemVariants}>Mike Seese</motion.h1>
-          <motion.p variants={heroItemVariants}>Founder / Lead Developer at Incanta Games</motion.p>
+          <motion.p variants={heroItemVariants}>
+            Founder / Lead Developer at Incanta Games
+          </motion.p>
           <motion.p variants={heroItemVariants}>Vancouver, WA, USA</motion.p>
 
-          <motion.div className="mobile_social_icons" variants={heroItemVariants}>
+          <motion.div
+            className="mobile_social_icons"
+            variants={heroItemVariants}
+          >
             <a
               href="https://github.com/mikeseese"
               target="_blank"
@@ -87,10 +93,7 @@ function Main() {
             >
               <LinkedInIcon />
             </a>
-            <a
-              href="mailto:mike@incanta.dev"
-              rel="noreferrer"
-            >
+            <a href="mailto:mike@incanta.dev" rel="noreferrer">
               <EmailIcon />
             </a>
             <a

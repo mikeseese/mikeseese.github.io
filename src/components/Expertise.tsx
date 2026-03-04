@@ -15,7 +15,11 @@ const sectionVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
 };
 
 const labelsFirst = [
@@ -75,10 +79,10 @@ function Expertise() {
             <FontAwesomeIcon icon={faGamepad} size="3x" />
             <h3>Game Engine & Multiplayer Development</h3>
             <p>
-              Deep expertise in Unreal Engine C++ development, replicated gameplay
-              systems, dedicated server optimization, and build acceleration.
-              Published 3 plugins on Fab (all rated 5.0) and made 6 accepted
-              engine-level contributions to Unreal Engine.
+              Deep expertise in Unreal Engine C++ development, replicated
+              gameplay systems, dedicated server optimization, and build
+              acceleration. Published 3 plugins on Fab (all rated 5.0) and made
+              6 accepted engine-level contributions to Unreal Engine.
             </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -94,8 +98,8 @@ function Expertise() {
             <p>
               Architected scalable multiplayer backends with Node.js/TypeScript
               microservices and Kubernetes-based infrastructure using
-              Infrastructure-as-Code. Experienced in cloud infrastructure,
-              CI/CD pipelines, and deployment automation.
+              Infrastructure-as-Code. Experienced in cloud infrastructure, CI/CD
+              pipelines, and deployment automation.
             </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -111,8 +115,8 @@ function Expertise() {
             <p>
               Led engineering for a blockchain developer SaaS platform and
               contributed to Ethereum infrastructure tooling. Currently
-              exploring LLM agentic workflows for in-editor and runtime AI
-              agent actions in Unreal Engine.
+              exploring LLM agentic workflows for in-editor and runtime AI agent
+              actions in Unreal Engine.
             </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>

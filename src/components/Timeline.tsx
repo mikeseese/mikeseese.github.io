@@ -1,7 +1,10 @@
 import React from "react";
 import "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBriefcase,
+  faGraduationCap,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -28,11 +31,11 @@ function Timeline() {
               Incanta Games &mdash; Vancouver, WA
             </h4>
             <p>
-              Architected Redwood multiplayer backend (awarded $25k Epic MegaGrant).
-              Built Kubernetes infrastructure with Pulumi IaC.
-              Published 3 Unreal Engine plugins on Fab (all rated 5.0).
-              Made 6 accepted contributions to Unreal Engine.
-              Client work for Hathora, JALI Research, and Gardens Interactive.
+              Architected Redwood multiplayer backend (awarded $25k Epic
+              MegaGrant). Built Kubernetes infrastructure with Pulumi IaC.
+              Published 3 Unreal Engine plugins on Fab (all rated 5.0). Made 6
+              accepted contributions to Unreal Engine. Client work for Hathora,
+              JALI Research, and Gardens Interactive.
             </p>
             <div className="timeline-video-row">
               <a
@@ -61,10 +64,10 @@ function Timeline() {
               Truffle Suite &mdash; Vancouver, WA
             </h4>
             <p>
-              Led engineering for a Node.js SaaS DevOps platform for blockchain developers.
-              Scaled cloud infrastructure for CI/CD workflows.
-              Grew engineering team from 3 to 10 developers.
-              Developed Ganache and Ethereum tooling.
+              Led engineering for a Node.js SaaS DevOps platform for blockchain
+              developers. Scaled cloud infrastructure for CI/CD workflows. Grew
+              engineering team from 3 to 10 developers. Developed Ganache and
+              Ethereum tooling.
             </p>
             <div className="timeline-video-row">
               <a
@@ -93,9 +96,10 @@ function Timeline() {
               Breadboard &mdash; Orlando, FL
             </h4>
             <p>
-              Full-stack engineer on Terra Mango, a Unity-based MMO.
-              Developed gameplay systems and backend services in C#, Node.js, and Unity.
-              Partnered with clients to scope and deliver custom software solutions.
+              Full-stack engineer on Terra Mango, a Unity-based MMO. Developed
+              gameplay systems and backend services in C#, Node.js, and Unity.
+              Partnered with clients to scope and deliver custom software
+              solutions.
             </p>
             <div className="timeline-video-row">
               <a
@@ -124,8 +128,8 @@ function Timeline() {
               Lockheed Martin &mdash; Orlando, FL
             </h4>
             <p>
-              Designed autonomous path finding and formation flight C++ algorithms.
-              Created tactical missile inertial tracker algorithms.
+              Designed autonomous path finding and formation flight C++
+              algorithms. Created tactical missile inertial tracker algorithms.
               Matured and integrated flight simulation software.
             </p>
             <div className="timeline-video-row">
