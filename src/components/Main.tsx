@@ -61,7 +61,7 @@ function Main() {
               <EmailIcon />
             </a>
             <a
-              href="https://resume.mikeseese.com/assets/latest.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
               title="Resume"
@@ -97,7 +97,7 @@ function Main() {
               <EmailIcon />
             </a>
             <a
-              href="https://resume.mikeseese.com/assets/latest.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
               title="Resume"

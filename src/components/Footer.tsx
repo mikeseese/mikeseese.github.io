@@ -18,11 +18,7 @@ function Footer() {
         >
           <LinkedInIcon />
         </a>
-        <a
-          href="https://resume.mikeseese.com/assets/latest.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="/resume.pdf" target="_blank" rel="noreferrer">
           <ArticleIcon />
         </a>
       </div>
