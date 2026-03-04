@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import "../assets/styles/Timeline.scss";
+import megagrantLogo from "../assets/images/Epic_MegaGrants_Recipient_logo.svg";
 
 function Speaking() {
   return (
@@ -85,7 +86,7 @@ function Speaking() {
               rel="noreferrer"
             >
               <img
-                src="/src/assets/images/Epic_MegaGrants_Recipient_logo.svg"
+                src={megagrantLogo}
                 className="megagrant-logo"
                 alt="Epic MegaGrants Recipient"
               />

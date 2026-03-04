@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion } from "motion/react";
 import "../assets/styles/Project.scss";
+import checkpointImg from "../assets/images/checkpoint.png";
+import chromiumviewVid from "../assets/images/chromiumview.mp4";
+import hathoraImg from "../assets/images/hathora.jpg";
+import gardensImg from "../assets/images/gardens.jpg";
 
 function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -173,7 +177,7 @@ function Project() {
         <motion.div className="project" variants={cardVariants}>
           <a href="https://github.com/incanta/Checkpoint" target="_blank" rel="noreferrer">
             <img
-              src="/src/assets/images/checkpoint.png"
+              src={checkpointImg}
               className="project-thumb"
               alt="Checkpoint Version Control"
             />
@@ -187,9 +191,9 @@ function Project() {
           </p>
         </motion.div>
         <motion.div className="project" variants={cardVariants}>
-          <button className="video-thumb-btn" onClick={() => setLightboxSrc("/src/assets/images/chromiumview.mp4")} aria-label="Play ChromiumView demo">
+          <button className="video-thumb-btn" onClick={() => setLightboxSrc(chromiumviewVid)} aria-label="Play ChromiumView demo">
             <video
-              src="/src/assets/images/chromiumview.mp4"
+              src={chromiumviewVid}
               className="project-thumb"
               autoPlay
               muted
@@ -208,7 +212,7 @@ function Project() {
         <motion.div className="project" variants={cardVariants}>
           <a href="https://hathora.dev/" target="_blank" rel="noreferrer">
             <img
-              src="/src/assets/images/hathora.jpg"
+              src={hathoraImg}
               className="project-thumb"
               alt="Hathora"
             />
@@ -243,7 +247,7 @@ function Project() {
         <motion.div className="project" variants={cardVariants}>
           <a href="https://gardens.dev/" target="_blank" rel="noreferrer">
             <img
-              src="/src/assets/images/gardens.jpg"
+              src={gardensImg}
               className="project-thumb"
               alt="Gardens Interactive"
             />
