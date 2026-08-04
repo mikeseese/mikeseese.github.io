@@ -3285,9 +3285,9 @@ __metadata:
   linkType: hard
 
 "ip-address@npm:^10.0.1":
-  version: 10.2.0
-  resolution: "ip-address@npm:10.2.0"
-  checksum: 10c0/5a00aada6e922c9c69dfc800ed5d0fa3348675ebdeed0e1575f503f27ca385b5f534363c9af7ad1daf64c1f1409388cdd3cc2e9b9b0fe1c924a431378d55075a
+  version: 10.4.0
+  resolution: "ip-address@npm:10.4.0"
+  checksum: 10c0/d7b0bd2624fd861afbae6e49036a9b56f9506eaff7ff38592b7b4492dd5c272b53f5356dc8cc019e318acf29a96c90a3d1af1df761960267d23efa96858270fa
   languageName: node
   linkType: hard
 
@@ -3749,6 +3749,7 @@ __metadata:
     eslint-plugin-prefer-arrow: "npm:^1.2.3"
     eslint-plugin-prettier: "npm:^5.2.1"
     motion: "npm:^12.34.5"
+    postcss: "npm:^8.5.18"
     prettier: "npm:^3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
@@ -4186,7 +4187,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.6":
+"postcss@npm:^8.5.18, postcss@npm:^8.5.6":
   version: 8.5.25
   resolution: "postcss@npm:8.5.25"
   dependencies:
